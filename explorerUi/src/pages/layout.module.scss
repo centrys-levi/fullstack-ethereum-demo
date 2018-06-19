@@ -1,0 +1,14 @@
+.content {
+  display: flex;
+}
+
+.sideBar {
+  max-width: 350px;
+  height: 100vh;
+  overflow: auto;
+}
+
+.main {
+  flex: 1;
+  margin-left: 20px;
+}

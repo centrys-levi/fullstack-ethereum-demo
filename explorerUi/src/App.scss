@@ -1,0 +1,37 @@
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body, input {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+  font-weight: 400;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  border-bottom: 1px solid #5b6f7f;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
