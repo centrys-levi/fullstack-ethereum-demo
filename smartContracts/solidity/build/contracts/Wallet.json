@@ -55,20 +55,20 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506040516020806101938339810180604052810190808051906020019092919050505080600081905550506101498061004a6000396000f300608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632e1a7d4d1461005c57806350017f3e1461008957806385aa2452146100b6575b600080fd5b34801561006857600080fd5b50610087600480360381019080803590602001909291905050506100e1565b005b34801561009557600080fd5b506100b460048036038101908080359060200190929190505050610109565b005b3480156100c257600080fd5b506100cb610117565b6040518082815260200191505060405180910390f35b6000816000540310156100fa5760008081905550610106565b80600054036000819055505b50565b806000540160008190555050565b600054815600a165627a7a723058200becf29c9e14eb8b76499aeb234502df08148601da6109e111eb03f6582182c70029",
-  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632e1a7d4d1461005c57806350017f3e1461008957806385aa2452146100b6575b600080fd5b34801561006857600080fd5b50610087600480360381019080803590602001909291905050506100e1565b005b34801561009557600080fd5b506100b460048036038101908080359060200190929190505050610109565b005b3480156100c257600080fd5b506100cb610117565b6040518082815260200191505060405180910390f35b6000816000540310156100fa5760008081905550610106565b80600054036000819055505b50565b806000540160008190555050565b600054815600a165627a7a723058200becf29c9e14eb8b76499aeb234502df08148601da6109e111eb03f6582182c70029",
-  "sourceMap": "26:369:0:-;;;73:73;8:9:-1;5:2;;;30:1;27;20:12;5:2;73:73:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;130:11;117:10;:24;;;;73:73;26:369;;;;;;",
-  "deployedSourceMap": "26:369:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;233:160;;8:9:-1;5:2;;;30:1;27;20:12;5:2;233:160:0;;;;;;;;;;;;;;;;;;;;;;;;;;150:79;;8:9:-1;5:2;;;30:1;27;20:12;5:2;150:79:0;;;;;;;;;;;;;;;;;;;;;;;;;;46:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;46:22:0;;;;;;;;;;;;;;;;;;;;;;;233:160;304:1;295:6;282:10;;:19;:23;278:111;;;328:1;315:10;:14;;;;278:111;;;376:6;363:10;;:19;350:10;:32;;;;278:111;233:160;:::o;150:79::-;218:6;205:10;;:19;192:10;:32;;;;150:79;:::o;46:22::-;;;;:::o",
-  "source": "pragma solidity ^0.4.16;\n\ncontract Wallet {\n  uint public fiatAmount;\n\n  constructor (uint _fiatAmount) public {\n    fiatAmount = _fiatAmount;\n  }\n\n  function topUp (uint amount) public {\n    fiatAmount = fiatAmount + amount;\n  }\n\n  function withdraw (uint amount) public {\n    if (fiatAmount - amount < 0) {\n      fiatAmount = 0;\n    } else {\n      fiatAmount = fiatAmount - amount;\n    }\n  }\n}\n",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405160208061016c8339810180604052810190808051906020019092919050505080600081905550506101228061004a6000396000f3006080604052600436106053576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632e1a7d4d14605857806350017f3e14608257806385aa24521460ac575b600080fd5b348015606357600080fd5b5060806004803603810190808035906020019092919050505060d4565b005b348015608d57600080fd5b5060aa6004803603810190808035906020019092919050505060e2565b005b34801560b757600080fd5b5060be60f0565b6040518082815260200191505060405180910390f35b806000540360008190555050565b806000540160008190555050565b600054815600a165627a7a7230582073243ed3454453f7f7b28f94ca606f4e2273ba890fd131e5800c2c1a076e3d1e0029",
+  "deployedBytecode": "0x6080604052600436106053576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632e1a7d4d14605857806350017f3e14608257806385aa24521460ac575b600080fd5b348015606357600080fd5b5060806004803603810190808035906020019092919050505060d4565b005b348015608d57600080fd5b5060aa6004803603810190808035906020019092919050505060e2565b005b34801560b757600080fd5b5060be60f0565b6040518082815260200191505060405180910390f35b806000540360008190555050565b806000540160008190555050565b600054815600a165627a7a7230582073243ed3454453f7f7b28f94ca606f4e2273ba890fd131e5800c2c1a076e3d1e0029",
+  "sourceMap": "26:291:0:-;;;73:73;8:9:-1;5:2;;;30:1;27;20:12;5:2;73:73:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;130:11;117:10;:24;;;;73:73;26:291;;;;;;",
+  "deployedSourceMap": "26:291:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;233:82;;8:9:-1;5:2;;;30:1;27;20:12;5:2;233:82:0;;;;;;;;;;;;;;;;;;;;;;;;;;150:79;;8:9:-1;5:2;;;30:1;27;20:12;5:2;150:79:0;;;;;;;;;;;;;;;;;;;;;;;;;;46:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;46:22:0;;;;;;;;;;;;;;;;;;;;;;;233:82;304:6;291:10;;:19;278:10;:32;;;;233:82;:::o;150:79::-;218:6;205:10;;:19;192:10;:32;;;;150:79;:::o;46:22::-;;;;:::o",
+  "source": "pragma solidity ^0.4.16;\n\ncontract Wallet {\n  uint public fiatAmount;\n\n  constructor (uint _fiatAmount) public {\n    fiatAmount = _fiatAmount;\n  }\n\n  function topUp (uint amount) public {\n    fiatAmount = fiatAmount + amount;\n  }\n\n  function withdraw (uint amount) public {\n    fiatAmount = fiatAmount - amount;\n  }\n}\n",
   "sourcePath": "/Users/hegeduslevente/code/demo_meetup/smartContracts/solidity/contracts/Wallet.sol",
   "ast": {
     "absolutePath": "/Users/hegeduslevente/code/demo_meetup/smartContracts/solidity/contracts/Wallet.sol",
     "exportedSymbols": {
       "Wallet": [
-        50
+        38
       ]
     },
-    "id": 51,
+    "id": 39,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -88,9 +88,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 50,
+        "id": 38,
         "linearizedBaseContracts": [
-          50
+          38
         ],
         "name": "Wallet",
         "nodeType": "ContractDefinition",
@@ -100,7 +100,7 @@
             "id": 3,
             "name": "fiatAmount",
             "nodeType": "VariableDeclaration",
-            "scope": 50,
+            "scope": 38,
             "src": "46:22:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -223,7 +223,7 @@
               "parameters": [],
               "src": "111:0:0"
             },
-            "scope": 50,
+            "scope": 38,
             "src": "73:73:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -363,7 +363,7 @@
               "parameters": [],
               "src": "186:0:0"
             },
-            "scope": 50,
+            "scope": 38,
             "src": "150:79:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -371,41 +371,52 @@
           },
           {
             "body": {
-              "id": 48,
+              "id": 36,
               "nodeType": "Block",
-              "src": "272:121:0",
+              "src": "272:43:0",
               "statements": [
                 {
-                  "condition": {
+                  "expression": {
                     "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
                     "id": 34,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
-                    "leftExpression": {
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 30,
+                      "name": "fiatAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "278:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
                       "argumentTypes": null,
                       "commonType": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 32,
+                      "id": 33,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 30,
+                        "id": 31,
                         "name": "fiatAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3,
-                        "src": "282:10:0",
+                        "src": "291:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -415,200 +426,37 @@
                       "operator": "-",
                       "rightExpression": {
                         "argumentTypes": null,
-                        "id": 31,
+                        "id": 32,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 27,
-                        "src": "295:6:0",
+                        "src": "304:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "src": "282:19:0",
+                      "src": "291:19:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "nodeType": "BinaryOperation",
-                    "operator": "<",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "hexValue": "30",
-                      "id": 33,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "304:1:0",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_0_by_1",
-                        "typeString": "int_const 0"
-                      },
-                      "value": "0"
-                    },
-                    "src": "282:23:0",
+                    "src": "278:32:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
-                  "falseBody": {
-                    "id": 46,
-                    "nodeType": "Block",
-                    "src": "342:47:0",
-                    "statements": [
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 44,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftHandSide": {
-                            "argumentTypes": null,
-                            "id": 40,
-                            "name": "fiatAmount",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 3,
-                            "src": "350:10:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "Assignment",
-                          "operator": "=",
-                          "rightHandSide": {
-                            "argumentTypes": null,
-                            "commonType": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            },
-                            "id": 43,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftExpression": {
-                              "argumentTypes": null,
-                              "id": 41,
-                              "name": "fiatAmount",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 3,
-                              "src": "363:10:0",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "nodeType": "BinaryOperation",
-                            "operator": "-",
-                            "rightExpression": {
-                              "argumentTypes": null,
-                              "id": 42,
-                              "name": "amount",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 27,
-                              "src": "376:6:0",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "src": "363:19:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "src": "350:32:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "id": 45,
-                        "nodeType": "ExpressionStatement",
-                        "src": "350:32:0"
-                      }
-                    ]
-                  },
-                  "id": 47,
-                  "nodeType": "IfStatement",
-                  "src": "278:111:0",
-                  "trueBody": {
-                    "id": 39,
-                    "nodeType": "Block",
-                    "src": "307:29:0",
-                    "statements": [
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 37,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftHandSide": {
-                            "argumentTypes": null,
-                            "id": 35,
-                            "name": "fiatAmount",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 3,
-                            "src": "315:10:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "Assignment",
-                          "operator": "=",
-                          "rightHandSide": {
-                            "argumentTypes": null,
-                            "hexValue": "30",
-                            "id": 36,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": true,
-                            "kind": "number",
-                            "lValueRequested": false,
-                            "nodeType": "Literal",
-                            "src": "328:1:0",
-                            "subdenomination": null,
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_rational_0_by_1",
-                              "typeString": "int_const 0"
-                            },
-                            "value": "0"
-                          },
-                          "src": "315:14:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "id": 38,
-                        "nodeType": "ExpressionStatement",
-                        "src": "315:14:0"
-                      }
-                    ]
-                  }
+                  "id": 35,
+                  "nodeType": "ExpressionStatement",
+                  "src": "278:32:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 49,
+            "id": 37,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -624,7 +472,7 @@
                   "id": 27,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 49,
+                  "scope": 37,
                   "src": "252:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -655,27 +503,27 @@
               "parameters": [],
               "src": "272:0:0"
             },
-            "scope": 50,
-            "src": "233:160:0",
+            "scope": 38,
+            "src": "233:82:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 51,
-        "src": "26:369:0"
+        "scope": 39,
+        "src": "26:291:0"
       }
     ],
-    "src": "0:396:0"
+    "src": "0:318:0"
   },
   "legacyAST": {
     "absolutePath": "/Users/hegeduslevente/code/demo_meetup/smartContracts/solidity/contracts/Wallet.sol",
     "exportedSymbols": {
       "Wallet": [
-        50
+        38
       ]
     },
-    "id": 51,
+    "id": 39,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -695,9 +543,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 50,
+        "id": 38,
         "linearizedBaseContracts": [
-          50
+          38
         ],
         "name": "Wallet",
         "nodeType": "ContractDefinition",
@@ -707,7 +555,7 @@
             "id": 3,
             "name": "fiatAmount",
             "nodeType": "VariableDeclaration",
-            "scope": 50,
+            "scope": 38,
             "src": "46:22:0",
             "stateVariable": true,
             "storageLocation": "default",
@@ -830,7 +678,7 @@
               "parameters": [],
               "src": "111:0:0"
             },
-            "scope": 50,
+            "scope": 38,
             "src": "73:73:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -970,7 +818,7 @@
               "parameters": [],
               "src": "186:0:0"
             },
-            "scope": 50,
+            "scope": 38,
             "src": "150:79:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -978,41 +826,52 @@
           },
           {
             "body": {
-              "id": 48,
+              "id": 36,
               "nodeType": "Block",
-              "src": "272:121:0",
+              "src": "272:43:0",
               "statements": [
                 {
-                  "condition": {
+                  "expression": {
                     "argumentTypes": null,
-                    "commonType": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
                     "id": 34,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
-                    "leftExpression": {
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 30,
+                      "name": "fiatAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "278:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
                       "argumentTypes": null,
                       "commonType": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 32,
+                      "id": 33,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 30,
+                        "id": 31,
                         "name": "fiatAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 3,
-                        "src": "282:10:0",
+                        "src": "291:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1022,200 +881,37 @@
                       "operator": "-",
                       "rightExpression": {
                         "argumentTypes": null,
-                        "id": 31,
+                        "id": 32,
                         "name": "amount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 27,
-                        "src": "295:6:0",
+                        "src": "304:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "src": "282:19:0",
+                      "src": "291:19:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "nodeType": "BinaryOperation",
-                    "operator": "<",
-                    "rightExpression": {
-                      "argumentTypes": null,
-                      "hexValue": "30",
-                      "id": 33,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": true,
-                      "kind": "number",
-                      "lValueRequested": false,
-                      "nodeType": "Literal",
-                      "src": "304:1:0",
-                      "subdenomination": null,
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_rational_0_by_1",
-                        "typeString": "int_const 0"
-                      },
-                      "value": "0"
-                    },
-                    "src": "282:23:0",
+                    "src": "278:32:0",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_bool",
-                      "typeString": "bool"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
-                  "falseBody": {
-                    "id": 46,
-                    "nodeType": "Block",
-                    "src": "342:47:0",
-                    "statements": [
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 44,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftHandSide": {
-                            "argumentTypes": null,
-                            "id": 40,
-                            "name": "fiatAmount",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 3,
-                            "src": "350:10:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "Assignment",
-                          "operator": "=",
-                          "rightHandSide": {
-                            "argumentTypes": null,
-                            "commonType": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            },
-                            "id": 43,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "leftExpression": {
-                              "argumentTypes": null,
-                              "id": 41,
-                              "name": "fiatAmount",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 3,
-                              "src": "363:10:0",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "nodeType": "BinaryOperation",
-                            "operator": "-",
-                            "rightExpression": {
-                              "argumentTypes": null,
-                              "id": 42,
-                              "name": "amount",
-                              "nodeType": "Identifier",
-                              "overloadedDeclarations": [],
-                              "referencedDeclaration": 27,
-                              "src": "376:6:0",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              }
-                            },
-                            "src": "363:19:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "src": "350:32:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "id": 45,
-                        "nodeType": "ExpressionStatement",
-                        "src": "350:32:0"
-                      }
-                    ]
-                  },
-                  "id": 47,
-                  "nodeType": "IfStatement",
-                  "src": "278:111:0",
-                  "trueBody": {
-                    "id": 39,
-                    "nodeType": "Block",
-                    "src": "307:29:0",
-                    "statements": [
-                      {
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 37,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftHandSide": {
-                            "argumentTypes": null,
-                            "id": 35,
-                            "name": "fiatAmount",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 3,
-                            "src": "315:10:0",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "Assignment",
-                          "operator": "=",
-                          "rightHandSide": {
-                            "argumentTypes": null,
-                            "hexValue": "30",
-                            "id": 36,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": true,
-                            "kind": "number",
-                            "lValueRequested": false,
-                            "nodeType": "Literal",
-                            "src": "328:1:0",
-                            "subdenomination": null,
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_rational_0_by_1",
-                              "typeString": "int_const 0"
-                            },
-                            "value": "0"
-                          },
-                          "src": "315:14:0",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "id": 38,
-                        "nodeType": "ExpressionStatement",
-                        "src": "315:14:0"
-                      }
-                    ]
-                  }
+                  "id": 35,
+                  "nodeType": "ExpressionStatement",
+                  "src": "278:32:0"
                 }
               ]
             },
             "documentation": null,
-            "id": 49,
+            "id": 37,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1231,7 +927,7 @@
                   "id": 27,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 49,
+                  "scope": 37,
                   "src": "252:11:0",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1262,18 +958,18 @@
               "parameters": [],
               "src": "272:0:0"
             },
-            "scope": 50,
-            "src": "233:160:0",
+            "scope": 38,
+            "src": "233:82:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 51,
-        "src": "26:369:0"
+        "scope": 39,
+        "src": "26:291:0"
       }
     ],
-    "src": "0:396:0"
+    "src": "0:318:0"
   },
   "compiler": {
     "name": "solc",
@@ -1281,5 +977,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.0",
-  "updatedAt": "2018-06-19T05:26:46.977Z"
+  "updatedAt": "2018-06-21T06:30:55.161Z"
 }

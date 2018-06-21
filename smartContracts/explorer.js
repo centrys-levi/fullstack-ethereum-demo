@@ -32,13 +32,12 @@ const getUtilityMethods = (web3) => {
   };
 
   const getContractTransactions = (contractAddress, initialValuesDecoder) => {
-    // todo: current implementation is extremely inefficient
     return getLatestBlocks(1000).then(blocks =>
       Promise.all(blocks.map(block => filterContractTransactions(block, contractAddress, initialValuesDecoder))).then(blockTransactions =>
         blockTransactions
-        .reduce((acc, currentTransactions) => {
-            return currentTransactions[0] ? [...acc, ...currentTransactions] : acc;
-          }, [])
+          .reduce((acc, currentTransactions) => {
+              return currentTransactions[0] ? [...acc, ...currentTransactions] : acc;
+            }, [])
       ));
   };
 
@@ -70,12 +69,11 @@ const getUtilityMethods = (web3) => {
     );
   };
 
-  const decodeWalletAmounts = (transaction, contractAddress) =>{
+  const decodeWalletAmounts = (transaction, contractAddress) =>
     web3.eth.getStorageAt(contractAddress, 0, transaction.blockNumber)
       .then((fiatAmountHex) => ({
         fiatAmount: convertForOutside(web3.utils.hexToNumber(fiatAmountHex)),
     }));
-  }
 
   const getBlockWithDecodedTransactions = (blockNumber) => {
     return web3.eth.getBlock(blockNumber, true).then(block => {

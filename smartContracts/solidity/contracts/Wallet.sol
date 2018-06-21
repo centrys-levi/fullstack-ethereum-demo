@@ -12,10 +12,6 @@ contract Wallet {
   }
 
   function withdraw (uint amount) public {
-    if (fiatAmount - amount < 0) {
-      fiatAmount = 0;
-    } else {
-      fiatAmount = fiatAmount - amount;
-    }
+    fiatAmount = fiatAmount - amount;
   }
 }
